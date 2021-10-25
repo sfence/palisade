@@ -11,3 +11,11 @@ if minetest.get_modpath("default") then
     }
 end
 
+if minetest.get_modpath("hades_trees") then
+  palisade.trees["tree"] = {
+      desc = S("Temperate Tree"),
+      tree_node = "hades_trees:tree",
+      tiles = {"default_tree.png","default_tree_top.png", "default_tree_top.png"}
+    }
+end
+

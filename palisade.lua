@@ -543,8 +543,134 @@ function palisade.register_palisade(key, def)
       groups = table.copy(tree.groups),
       sounds = table.copy(tree.sounds),
     })
+  
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_inner 2",
+      recipe = {
+        {def.tree_node},
+        {def.tree_node},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner_point",
+      recipe = {
+        "palisade:"..key.."_palisade_corner_inner"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_wall",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner", "palisade:"..key.."_palisade_corner_inner"},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner 2",
+      recipe = {
+        "palisade:"..key.."_palisade_wall"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_wall_point",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner_point", "palisade:"..key.."_palisade_corner_inner_point"},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner_point 2",
+      recipe = {
+        "palisade:"..key.."_palisade_wall_point"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_outer",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner", ""},
+        {"palisade:"..key.."_palisade_corner_inner", "palisade:"..key.."_palisade_corner_inner"},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner 3",
+      recipe = {
+        "palisade:"..key.."_palisade_corner_outer"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_outer_point",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner_point", ""},
+        {"palisade:"..key.."_palisade_corner_inner_point", "palisade:"..key.."_palisade_corner_inner_point"},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner_point 3",
+      recipe = {
+        "palisade:"..key.."_palisade_corner_outer_point"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_crossing",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner", "palisade:"..key.."_palisade_corner_inner"},
+        {"palisade:"..key.."_palisade_corner_inner", "palisade:"..key.."_palisade_corner_inner"},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner 4",
+      recipe = {
+        "palisade:"..key.."_palisade_crossing"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_crossing_point",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner_point", "palisade:"..key.."_palisade_corner_inner_point"},
+        {"palisade:"..key.."_palisade_corner_inner_point", "palisade:"..key.."_palisade_corner_inner_point"},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner_point 4",
+      recipe = {
+        "palisade:"..key.."_palisade_crossing_point"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_post 2",
+      recipe = {
+        {"", "palisade:"..key.."_palisade_corner_inner"},
+        {"palisade:"..key.."_palisade_corner_inner", ""},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner",
+      recipe = {
+        "palisade:"..key.."_palisade_post"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_post_point 2",
+      recipe = {
+        {"", "palisade:"..key.."_palisade_corner_inner_point"},
+        {"palisade:"..key.."_palisade_corner_inner_point", ""},
+      },
+    })
+  minetest.register_craft({
+      type = "shapeless",
+      output = "palisade:"..key.."_palisade_corner_inner_point",
+      recipe = {
+        "palisade:"..key.."_palisade_post_point"
+      },
+    })
 end
 
 for key,tree in pairs(palisade.trees) do
   palisade.register_palisade(key, tree)
 end
+
