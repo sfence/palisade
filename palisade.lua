@@ -423,6 +423,12 @@ local palisade_post_point_box = {
 
 function palisade.register_palisade(key, def)
   local tree = minetest.registered_nodes[def.tree_node]
+  if not tree then
+    error("[palisade] Node "..def.tree_node.." isn't defined.")
+  end
+  if (def.tiles==nil) then
+    def.tiles = {tree.tiles[3], tree.tiles[1], tree.tiles[2]}
+  end
   minetest.register_node(":palisade:"..key.."_palisade_wall", {
       description = def.desc.." "..S("Palisade Wall"),
       paramtype = "light",
