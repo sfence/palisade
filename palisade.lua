@@ -421,6 +421,16 @@ local palisade_post_point_box = {
     },
   }
 
+local function after_place_palisade(pos, placer, itemstack, pointed_thing)
+  local node = minetest.get_node(pos)
+  
+  local under = minetest.get_node(pointed_thing.under)
+  if minetest.get_item_group(under.name, "palisade_wall")>0 and (under.param2~=node.param2) then
+    node.param2 = under.param2
+    minetest.swap_node(pos, node)
+  end
+end
+
 function palisade.register_palisade(key, def)
   local tree = minetest.registered_nodes[def.tree_node]
   if not tree then
@@ -429,6 +439,9 @@ function palisade.register_palisade(key, def)
   if (def.tiles==nil) then
     def.tiles = {tree.tiles[3], tree.tiles[1], tree.tiles[2]}
   end
+  local groups = table.copy(tree.groups)
+  groups.palisade = 1
+  groups.palisade_wall = 1
   minetest.register_node(":palisade:"..key.."_palisade_wall", {
       description = def.desc.." "..S("Palisade Wall"),
       paramtype = "light",
@@ -438,8 +451,9 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_wall_box,
       collision_box = palisade_wall_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
   minetest.register_node(":palisade:"..key.."_palisade_wall_point", {
       description = def.desc.." "..S("Palisade Wall Point"),
@@ -450,8 +464,9 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_wall_point_box,
       collision_box = palisade_wall_point_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
   minetest.register_node(":palisade:"..key.."_palisade_corner_inner", {
       description = def.desc.." "..S("Palisade Inner Corner"),
@@ -462,8 +477,9 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_corner_inner_box,
       collision_box = palisade_corner_inner_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
   minetest.register_node(":palisade:"..key.."_palisade_corner_inner_point", {
       description = def.desc.." "..S("Palisade Inner Corner Point"),
@@ -474,8 +490,9 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_corner_inner_point_box,
       collision_box = palisade_corner_inner_point_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
   minetest.register_node(":palisade:"..key.."_palisade_corner_outer", {
       description = def.desc.." "..S("Palisade Outer Corner"),
@@ -486,8 +503,9 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_corner_outer_box,
       collision_box = palisade_corner_outer_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
   minetest.register_node(":palisade:"..key.."_palisade_corner_outer_point", {
       description = def.desc.." "..S("Palisade Outer Corner Point"),
@@ -498,8 +516,9 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_corner_outer_point_box,
       collision_box = palisade_corner_outer_point_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
   minetest.register_node(":palisade:"..key.."_palisade_crossing", {
       description = def.desc.." "..S("Palisade Crossing"),
@@ -510,8 +529,9 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_crossing_box,
       collision_box = palisade_crossing_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
   minetest.register_node(":palisade:"..key.."_palisade_crossing_point", {
       description = def.desc.." "..S("Palisade Crossing Point"),
@@ -522,9 +542,12 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_crossing_point_box,
       collision_box = palisade_crossing_point_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
     })
+  groups.palisade_wall = nil
+  groups.palisade_post = 1
   minetest.register_node(":palisade:"..key.."_palisade_post", {
       description = def.desc.." "..S("Palisade Post"),
       paramtype = "light",
@@ -534,7 +557,7 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_post_box,
       collision_box = palisade_post_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
     })
   minetest.register_node(":palisade:"..key.."_palisade_post_point", {
@@ -546,7 +569,7 @@ function palisade.register_palisade(key, def)
       tiles = table.copy(def.tiles),
       selection_box = palisade_post_point_box,
       collision_box = palisade_post_point_box,
-      groups = table.copy(tree.groups),
+      groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
     })
   
