@@ -2,10 +2,12 @@
 # List of selected trees for palisade build
 #
 # * - all supported trees
-# tree1,tree2 - comma separated list of trees keys
+# tree1,tree2 - comma separated list of trees keys (NO SPACES)
 # aviable tree keys:
 #   tree,acacia_tree,aspen_tree,jungletree,pine_tree
 #   tree,pale_tree,birch_tree,orange_tree,jungle_tree,charred_tree,canvas_tree
 #   baldcypress,birch,cherrytree,clementinetree,ebony,hollytree,larch,lemontree,mahogany,maple,oak,palm,plumtree,pomegranate,willow
+#   frost_tree,scorched_tree,yellow_trunk
+#   apple_tree_trunk,beech_trunk,birch_tree,cedar_trunk,date_palm_trunk,fir_trunk,jungletree_trunk,oak_trunk,palm_trunk,poplar_trunk,rubber_tree_trunk,sequoia_trunk,spruce_trunk,willow_trunk
 palisade_enabled_trees (List of trees for palisade building.) string *
 

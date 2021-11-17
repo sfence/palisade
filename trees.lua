@@ -28,7 +28,6 @@ if minetest.get_modpath("default") then
   add_tree("tree", {
       desc = S("Apple Tree"),
       tree_node = "default:tree",
-      --tiles = {"default_tree.png","default_tree_top.png", "default_tree_top.png"}
     })
   add_tree("acacia_tree", {
       desc = S("Acacia Tree"),
@@ -183,3 +182,77 @@ if minetest.get_modpath("willow") or minetest.get_modpath("hades_willow") then
       tree_node = "willow:trunk",
     })
 end
+
+if minetest.get_modpath("ethereal") then
+  add_tree("frost_tree", {
+      desc = S("Frost Tree"),
+      tree_node = "ethereal:frost_tree",
+    })
+  add_tree("scorched_tree", {
+      desc = S("Scorched Tree"),
+      tree_node = "ethereal:scorched_tree",
+    })
+  add_tree("yellow_trunk", {
+      desc = S("Healing Tree"),
+      tree_node = "ethereal:yellow_trunk",
+    })
+end
+if minetest.get_modpath("moretrees") then
+  add_tree("apple_tree_trunk", {
+      desc = S("Apple Tree"),
+      tree_node = "moretrees:apple_tree_trunk",
+    })
+  add_tree("beech_trunk", {
+      desc = S("Beech Tree"),
+      tree_node = "moretrees:beech_trunk",
+    })
+  add_tree("birch_trunk", {
+      desc = S("Birch Tree"),
+      tree_node = "moretrees:birch_trunk",
+    })
+  add_tree("cedar_trunk", {
+      desc = S("Cedar Tree"),
+      tree_node = "moretrees:cedar_trunk",
+    })
+  add_tree("date_palm_trunk", {
+      desc = S("Date Palm Tree"),
+      tree_node = "moretrees:date_palm_trunk",
+    })
+  add_tree("fir_trunk", {
+      desc = S("Fir Tree"),
+      tree_node = "moretrees:fir_trunk",
+    })
+  add_tree("jungletree_trunk", {
+      desc = S("Jungle Tree"),
+      tree_node = "moretrees:jungletree_trunk",
+    })
+  add_tree("oak_trunk", {
+      desc = S("Oak Tree"),
+      tree_node = "moretrees:oak_trunk",
+    })
+  add_tree("palm_trunk", {
+      desc = S("Palm Tree"),
+      tree_node = "moretrees:palm_trunk",
+    })
+  add_tree("poplar_trunk", {
+      desc = S("Poplar Tree"),
+      tree_node = "moretrees:poplar_trunk",
+    })
+  add_tree("rubber_tree_trunk", {
+      desc = S("Rubber Tree"),
+      tree_node = "moretrees:rubber_tree_trunk",
+    })
+  add_tree("sequoia_trunk", {
+      desc = S(" Tree"),
+      tree_node = "moretrees:sequoia_trunk",
+    })
+  add_tree("spruce_trunk", {
+      desc = S("Spruce Tree"),
+      tree_node = "moretrees:spruce_trunk",
+    })
+  add_tree("willow_trunk", {
+      desc = S("willow Tree"),
+      tree_node = "moretrees:willow_trunk",
+    })
+end
+
