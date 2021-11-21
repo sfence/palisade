@@ -440,6 +440,8 @@ function palisade.register_palisade(key, def)
     def.tiles = {tree.tiles[3], tree.tiles[1], tree.tiles[2]}
   end
   local groups = table.copy(tree.groups)
+  groups.tree = nil
+  groups.not_in_creative_inventory = nil
   groups.palisade = 1
   groups.palisade_wall = 1
   minetest.register_node(":palisade:"..key.."_palisade_wall", {
