@@ -420,6 +420,190 @@ local palisade_post_point_box = {
       {0.0,0.4375,0.4375,0.0625,0.5,0.5},
     },
   }
+-- node box {x=0, y=0, z=0}
+local palisade_wall_walkway_box = {
+    type = "fixed",
+    fixed = {
+      {0.0,-0.375,-0.5,0.5,-0.1875,-0.0625},
+      {0.0,-0.4375,-0.4375,0.5,-0.375,-0.125},
+      {-0.5,-0.3125,-0.4375,0.0,-0.125,0.0},
+      {0.0,-0.1875,-0.4375,0.5,-0.125,-0.125},
+      {0.0,-0.5,-0.375,0.5,-0.4375,-0.1875},
+      {-0.5,-0.375,-0.375,0.0,-0.3125,-0.0625},
+      {-0.5,-0.125,-0.375,0.5,-0.0625,-0.1875},
+      {-0.5,-0.4375,-0.3125,0.0,-0.375,-0.125},
+      {-0.5,-0.0625,-0.3125,0.0,0.0,-0.125},
+      {-0.5,-0.125,-0.1875,0.0,-0.0625,-0.0625},
+      {0.125,-0.5,-0.0625,0.3125,0.0,0.375},
+      {0.1875,0.0,-0.0625,0.375,0.5,0.375},
+      {-0.375,-0.5,0.0,-0.1875,0.0,0.4375},
+      {0.0625,-0.5,0.0,0.125,0.0,0.3125},
+      {0.3125,-0.5,0.0,0.375,0.0,0.3125},
+      {-0.3125,0.0,0.0,-0.125,0.5,0.4375},
+      {0.125,0.0,0.0,0.1875,0.5,0.3125},
+      {0.375,0.0,0.0,0.4375,0.5,0.3125},
+      {-0.4375,-0.5,0.0625,-0.375,0.0,0.375},
+      {-0.1875,-0.5,0.0625,-0.125,0.0,0.375},
+      {0.0,-0.5,0.0625,0.0625,0.0,0.25},
+      {0.375,-0.5,0.0625,0.4375,0.0,0.25},
+      {-0.375,0.0,0.0625,-0.3125,0.5,0.375},
+      {-0.125,0.0,0.0625,-0.0625,0.5,0.375},
+      {0.0625,0.0,0.0625,0.125,0.5,0.25},
+      {0.4375,0.0,0.0625,0.5,0.5,0.25},
+      {-0.5,-0.5,0.125,-0.4375,0.0,0.3125},
+      {-0.125,-0.5,0.125,-0.0625,0.0,0.3125},
+      {-0.4375,0.0,0.125,-0.375,0.5,0.3125},
+      {-0.0625,0.0,0.125,0.0,0.5,0.3125},
+    },
+  }
+-- node box {x=0, y=0, z=0}
+local palisade_corner_inner_walkway_box = {
+    type = "fixed",
+    fixed = {
+      {0.0,-0.3125,-0.5,0.5,-0.125,-0.0625},
+      {-0.5,-0.375,-0.4375,0.5,-0.3125,-0.125},
+      {-0.5,-0.3125,-0.4375,0.0,-0.1875,0.0},
+      {0.0,-0.125,-0.4375,0.5,-0.0625,-0.125},
+      {-0.5,-0.4375,-0.375,0.5,-0.375,-0.1875},
+      {-0.5,-0.1875,-0.375,0.0,-0.125,-0.0625},
+      {0.0,-0.0625,-0.375,0.5,0.0,-0.1875},
+      {-0.5,-0.5,-0.3125,0.0,-0.4375,-0.125},
+      {-0.5,-0.125,-0.3125,0.0,-0.0625,-0.125},
+      {-0.5,-0.4375,-0.1875,0.0,-0.375,-0.0625},
+      {-0.5,-0.375,-0.125,0.0,-0.3125,0.0},
+      {-0.375,-0.5,0.0,-0.1875,0.0,0.4375},
+      {-0.3125,0.0,0.0,-0.125,0.5,0.4375},
+      {-0.4375,-0.5,0.0625,-0.375,0.0,0.375},
+      {-0.1875,-0.5,0.0625,-0.125,0.0,0.375},
+      {-0.0625,-0.375,0.0625,0.5,-0.1875,0.5},
+      {-0.375,0.0,0.0625,-0.3125,0.5,0.375},
+      {-0.125,0.0,0.0625,-0.0625,0.5,0.375},
+      {-0.5,-0.5,0.125,-0.4375,0.0,0.3125},
+      {-0.125,-0.5,0.125,-0.0625,0.0,0.3125},
+      {-0.0625,-0.4375,0.125,0.5,-0.375,0.4375},
+      {-0.0625,-0.1875,0.125,0.5,-0.125,0.4375},
+      {-0.4375,0.0,0.125,-0.375,0.5,0.3125},
+      {-0.0625,0.0,0.125,0.0,0.5,0.3125},
+      {-0.0625,-0.5,0.1875,0.5,-0.4375,0.375},
+      {-0.0625,-0.125,0.1875,0.5,-0.0625,0.375},
+    },
+  }
+-- node box {x=0, y=0, z=0}
+local palisade_corner_inner_walkway2_box = {
+    type = "fixed",
+    fixed = {
+      {-0.375,-0.5,-0.5,-0.1875,-0.0625,0.0625},
+      {0.125,-0.5,-0.5,0.3125,-0.0625,0.0},
+      {-0.4375,-0.4375,-0.5,-0.375,-0.125,0.0625},
+      {-0.1875,-0.4375,-0.5,-0.125,-0.125,0.5},
+      {0.0625,-0.4375,-0.5,0.125,-0.125,0.0},
+      {0.3125,-0.4375,-0.5,0.375,-0.125,0.5},
+      {-0.5,-0.375,-0.5,-0.4375,-0.1875,0.0625},
+      {-0.125,-0.375,-0.5,-0.0625,-0.1875,0.0625},
+      {0.0,-0.375,-0.5,0.0625,-0.1875,0.0},
+      {0.375,-0.375,-0.5,0.4375,-0.1875,0.5},
+      {0.1875,-0.4375,0.0,0.3125,0.0,0.5},
+      {0.125,-0.375,0.0,0.1875,-0.0625,0.5},
+      {0.0625,-0.3125,0.0,0.125,-0.125,0.5},
+      {0.4375,-0.3125,0.0,0.5,-0.125,0.5},
+      {0.375,-0.1875,0.0,0.4375,-0.0625,0.5},
+      {0.3125,-0.125,0.0,0.375,0.0,0.5},
+      {-0.3125,0.0,0.0,-0.125,0.5,0.4375},
+      {-0.3125,-0.5,0.0625,-0.125,-0.4375,0.5},
+      {-0.3125,-0.4375,0.0625,-0.1875,0.0,0.5},
+      {-0.1875,-0.125,0.0625,-0.125,0.0,0.5},
+      {-0.375,0.0,0.0625,-0.3125,0.5,0.375},
+      {-0.125,0.0,0.0625,-0.0625,0.5,0.375},
+      {-0.375,-0.5,0.125,-0.3125,0.0,0.4375},
+      {-0.125,-0.5,0.125,-0.0625,0.0,0.4375},
+      {-0.4375,0.0,0.125,-0.375,0.5,0.3125},
+      {-0.0625,0.0,0.125,0.0,0.5,0.3125},
+      {-0.4375,-0.5,0.1875,-0.375,0.0,0.375},
+      {-0.0625,-0.5,0.1875,0.0,0.0,0.375},
+    },
+  }
+-- node box {x=0, y=0, z=0}
+local palisade_corner_outer_walkway_box = {
+    type = "fixed",
+    fixed = {
+      {0.0,-0.3125,-0.5,0.5,-0.125,-0.0625},
+      {-0.375,0.0,-0.5,-0.1875,0.5,-0.0625},
+      {-0.3125,-0.5,-0.4375,-0.125,0.0,0.0},
+      {0.0,-0.375,-0.4375,0.5,-0.3125,-0.125},
+      {0.0,-0.125,-0.4375,0.5,-0.0625,-0.125},
+      {-0.4375,0.0,-0.4375,-0.375,0.5,-0.125},
+      {-0.1875,0.0,-0.4375,-0.125,0.5,-0.125},
+      {-0.375,-0.5,-0.375,-0.3125,0.0,-0.0625},
+      {-0.125,-0.5,-0.375,-0.0625,0.5,-0.1875},
+      {0.0,-0.4375,-0.375,0.5,-0.375,-0.1875},
+      {0.0,-0.0625,-0.375,0.5,0.0,-0.1875},
+      {-0.5,0.0,-0.375,-0.4375,0.5,-0.1875},
+      {-0.4375,-0.5,-0.3125,-0.375,0.0,-0.125},
+      {-0.0625,-0.5,-0.3125,0.0,0.0,-0.125},
+      {-0.125,-0.5,-0.1875,-0.0625,0.0,-0.0625},
+      {0.125,-0.5,0.0,0.3125,0.0,0.4375},
+      {0.1875,0.0,0.0,0.375,0.5,0.4375},
+      {-0.375,-0.5,0.0625,-0.1875,0.0,0.5},
+      {0.0625,-0.5,0.0625,0.125,0.0,0.375},
+      {0.3125,-0.5,0.0625,0.375,0.0,0.375},
+      {-0.3125,0.0,0.0625,-0.125,0.5,0.5},
+      {0.125,0.0,0.0625,0.1875,0.5,0.375},
+      {0.375,0.0,0.0625,0.4375,0.5,0.375},
+      {-0.4375,-0.5,0.125,-0.375,0.0,0.4375},
+      {-0.1875,-0.5,0.125,-0.125,0.0,0.4375},
+      {0.0,-0.5,0.125,0.0625,0.0,0.3125},
+      {0.375,-0.5,0.125,0.4375,0.0,0.3125},
+      {-0.375,0.0,0.125,-0.3125,0.5,0.4375},
+      {-0.125,0.0,0.125,-0.0625,0.5,0.4375},
+      {0.0625,0.0,0.125,0.125,0.5,0.3125},
+      {0.4375,0.0,0.125,0.5,0.5,0.3125},
+      {-0.5,-0.5,0.1875,-0.4375,0.0,0.375},
+      {-0.125,-0.5,0.1875,-0.0625,0.0,0.375},
+      {-0.4375,0.0,0.1875,-0.375,0.5,0.375},
+      {-0.0625,0.0,0.1875,0.0,0.5,0.375},
+    },
+  }
+-- node box {x=0, y=0, z=0}
+local palisade_corner_outer_walkway2_box = {
+    type = "fixed",
+    fixed = {
+      {0.125,-0.5,-0.5,0.3125,-0.0625,0.4375},
+      {0.0625,-0.4375,-0.5,0.125,-0.125,0.0},
+      {0.3125,-0.4375,-0.5,0.375,-0.125,0.0},
+      {0.0,-0.375,-0.5,0.0625,-0.1875,0.0},
+      {0.375,-0.375,-0.5,0.4375,-0.1875,0.0},
+      {-0.375,0.0,-0.5,-0.1875,0.5,-0.0625},
+      {-0.3125,-0.5,-0.4375,-0.125,0.0,0.0},
+      {-0.4375,0.0,-0.4375,-0.375,0.5,-0.125},
+      {-0.1875,0.0,-0.4375,-0.125,0.5,-0.125},
+      {-0.375,-0.5,-0.375,-0.3125,0.0,-0.0625},
+      {-0.125,-0.5,-0.375,-0.0625,0.5,-0.1875},
+      {-0.5,0.0,-0.375,-0.4375,0.5,-0.1875},
+      {-0.4375,-0.5,-0.3125,-0.375,0.0,-0.125},
+      {-0.0625,-0.5,-0.3125,0.0,0.0,-0.125},
+      {-0.125,-0.5,-0.1875,-0.0625,0.0,-0.0625},
+      {0.125,-0.0625,0.0,0.3125,0.0,0.4375},
+      {0.1875,0.0,0.0,0.375,0.5,0.4375},
+      {-0.375,-0.5,0.0625,-0.1875,0.0,0.5},
+      {0.0625,-0.5,0.0625,0.125,0.0,0.375},
+      {0.3125,-0.5,0.0625,0.375,0.0,0.375},
+      {-0.3125,0.0,0.0625,-0.125,0.5,0.5},
+      {0.125,0.0,0.0625,0.1875,0.5,0.375},
+      {0.375,0.0,0.0625,0.4375,0.5,0.375},
+      {-0.4375,-0.5,0.125,-0.375,0.0,0.4375},
+      {-0.1875,-0.5,0.125,-0.125,0.0,0.4375},
+      {0.0,-0.5,0.125,0.0625,0.0,0.3125},
+      {0.375,-0.5,0.125,0.4375,0.0,0.3125},
+      {-0.375,0.0,0.125,-0.3125,0.5,0.4375},
+      {-0.125,0.0,0.125,-0.0625,0.5,0.4375},
+      {0.0625,0.0,0.125,0.125,0.5,0.3125},
+      {0.4375,0.0,0.125,0.5,0.5,0.3125},
+      {-0.5,-0.5,0.1875,-0.4375,0.0,0.375},
+      {-0.125,-0.5,0.1875,-0.0625,0.0,0.375},
+      {-0.4375,0.0,0.1875,-0.375,0.5,0.375},
+      {-0.0625,0.0,0.1875,0.0,0.5,0.375},
+    },
+  }
 
 local function after_place_palisade(pos, placer, itemstack, pointed_thing)
   local node = minetest.get_node(pos)
@@ -574,6 +758,74 @@ function palisade.register_palisade(key, def)
       groups = table.copy(groups),
       sounds = table.copy(tree.sounds),
     })
+  groups.palisade_post = nil
+  groups.palisade_wall = 1
+  groups.palisade_walkway = 1
+  minetest.register_node(":palisade:"..key.."_palisade_wall_walkway", {
+      description = def.desc.." "..S("Palisade Wall Walkway"),
+      paramtype = "light",
+      paramtype2 = "facedir",
+      drawtype = "mesh",
+      mesh = "palisade_palisade_wall_walkway.obj",
+      tiles = table.copy(def.tiles),
+      selection_box = palisade_wall_walkway_box,
+      collision_box = palisade_wall_walkway_box,
+      groups = table.copy(groups),
+      sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
+    })
+  minetest.register_node(":palisade:"..key.."_palisade_corner_inner_walkway", {
+      description = def.desc.." "..S("Palisade Corner Inner Walkway"),
+      paramtype = "light",
+      paramtype2 = "facedir",
+      drawtype = "mesh",
+      mesh = "palisade_palisade_corner_inner_walkway.obj",
+      tiles = table.copy(def.tiles),
+      selection_box = palisade_corner_inner_walkway_box,
+      collision_box = palisade_corner_inner_walkway_box,
+      groups = table.copy(groups),
+      sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
+    })
+  minetest.register_node(":palisade:"..key.."_palisade_corner_inner_walkway2", {
+      description = def.desc.." "..S("Palisade Corner Inner Walkway"),
+      paramtype = "light",
+      paramtype2 = "facedir",
+      drawtype = "mesh",
+      mesh = "palisade_palisade_corner_inner_walkway2.obj",
+      tiles = table.copy(def.tiles),
+      selection_box = palisade_corner_inner_walkway2_box,
+      collision_box = palisade_corner_inner_walkway2_box,
+      groups = table.copy(groups),
+      sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
+    })
+  minetest.register_node(":palisade:"..key.."_palisade_corner_outer_walkway", {
+      description = def.desc.." "..S("Palisade Corner Outer Walkway"),
+      paramtype = "light",
+      paramtype2 = "facedir",
+      drawtype = "mesh",
+      mesh = "palisade_palisade_corner_outer_walkway.obj",
+      tiles = table.copy(def.tiles),
+      selection_box = palisade_corner_outer_walkway_box,
+      collision_box = palisade_corner_outer_walkway_box,
+      groups = table.copy(groups),
+      sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
+    })
+  minetest.register_node(":palisade:"..key.."_palisade_corner_outer_walkway2", {
+      description = def.desc.." "..S("Palisade Corner Outer Walkway"),
+      paramtype = "light",
+      paramtype2 = "facedir",
+      drawtype = "mesh",
+      mesh = "palisade_palisade_corner_outer_walkway2.obj",
+      tiles = table.copy(def.tiles),
+      selection_box = palisade_corner_outer_walkway2_box,
+      collision_box = palisade_corner_outer_walkway2_box,
+      groups = table.copy(groups),
+      sounds = table.copy(tree.sounds),
+      after_place_node = after_place_palisade,
+    })
   
   minetest.register_craft({
       output = "palisade:"..key.."_palisade_corner_inner 2",
@@ -697,6 +949,49 @@ function palisade.register_palisade(key, def)
       output = "palisade:"..key.."_palisade_corner_inner_point",
       recipe = {
         "palisade:"..key.."_palisade_post_point"
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_wall_walkway",
+      recipe = {
+        {"palisade:"..key.."_palisade_wall", "palisade:"..key.."_palisade_corner_inner"},
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_inner_walkway 2",
+      recipe = {
+        {"", "palisade:"..key.."_palisade_corner_inner", ""},
+        {"palisade:"..key.."_palisade_corner_inner","palisade:"..key.."_palisade_wall", "palisade:"..key.."_palisade_corner_inner"},
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_inner_walkway2",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner_walkway"},
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_inner_walkway",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_inner_walkway2"},
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_outer_walkway 2",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_outer","palisade:"..key.."_palisade_corner_inner", "palisade:"..key.."_palisade_corner_outer"},
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_outer_walkway2",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_outer_walkway"},
+      },
+    })
+  minetest.register_craft({
+      output = "palisade:"..key.."_palisade_corner_outer_walkway",
+      recipe = {
+        {"palisade:"..key.."_palisade_corner_outer_walkway2"},
       },
     })
 end
