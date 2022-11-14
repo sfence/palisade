@@ -147,10 +147,17 @@ if minetest.get_modpath("mahogany") or minetest.get_modpath("hades_mahogany") th
     })
 end
 if minetest.get_modpath("maple") or minetest.get_modpath("hades_maple") then
-  add_tree("maple", {
-      desc = S("Maple Tree"),
-      tree_node = "maple:trunk",
-    })
+  if minetest.registered_nodes["maple:trunk"] then
+    add_tree("maple", {
+        desc = S("Maple Tree"),
+        tree_node = "maple:trunk",
+      })
+  else
+    add_tree("maple", {
+        desc = S("Maple Tree"),
+        tree_node = "maple:maple_tree",
+      })
+  end
 end
 if minetest.get_modpath("oak") or minetest.get_modpath("hades_oak") then
   add_tree("oak", {
